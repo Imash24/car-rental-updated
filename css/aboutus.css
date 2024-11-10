@@ -1,0 +1,331 @@
+/* navbar style*/
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.navbar {
+  background-color: white;
+  /* White background */
+  padding: 10px 20px;
+  /* Adjust padding to control the height */
+  /* position: fixed; */
+  /* Fixes navbar at the top */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Optional shadow for better visibility */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  /* Make links larger */
+  font-weight: bold;
+  /* Optional: Make text bold */
+  color: #2F2959;
+  /* transition: color 0.3s; */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #FFCB05;
+  /* Hover color */
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #FFCB05;
+  animation: slideIn 0.5s ease forwards;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px;
+  /* Space out the items */
+}
+
+.nav-link.active {
+  position: relative;
+  color: #FFCB05 !important;
+  /* Active link color */
+}
+
+.logo {
+  width: 250px;
+  /* Adjust logo size as needed */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+/* hero-section style */
+
+/* Full-screen Hero Section */
+.animated-hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #002147, #FFCB05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.animated-hero .btn {
+  border: none;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  animation: fadeIn 2s ease-out forwards;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  opacity: 0;
+  animation: slideUp 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  opacity: 0;
+  margin-bottom: 30px;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.hero-content .btn {
+  background-color: #FFCB05;
+  color: #002147;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+.hero-content .btn:hover {
+  background-color: #002147;
+  color: #FFCB05;
+}
+
+/* Floating Accent Shapes */
+.animated-hero::before,
+.animated-hero::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 203, 5, 0.2);
+  z-index: 1;
+}
+
+.animated-hero::before {
+  width: 200px;
+  height: 200px;
+  top: -50px;
+  left: 20%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.animated-hero::after {
+  width: 300px;
+  height: 300px;
+  bottom: -50px;
+  right: 15%;
+  animation: float 7s ease-in-out infinite;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* story-telling section */
+.story-section {
+  background-color: #f9f9f9;
+}
+
+.story-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.story-section img {
+  border-radius: 10px;
+}
+
+.cta-section .btn {
+  background-color: #2F2959;
+  color: #fdfdfd;
+  font-weight: bold;
+  border: none;
+}
+
+.cta-section .btn:hover {
+  background-color: white;
+  color: #2F2959;
+  font-weight: bold;
+  border: #2F2959 2px solid;
+}
+
+
+/* Footer Styling */
+.footer {
+  background-color: transparent;
+  /* Clear/transparent background */
+  color: #002147;
+  /* Adjust text color to maintain contrast */
+  padding: 40px 0;
+  border-top: #2F2959 2px solid;
+  font-family: "Nunito", sans-serif;
+}
+
+.footer-logo {
+  width: 180px;
+  /* Adjust the logo size */
+  height: auto;
+}
+
+.footer-about-text {
+  color: #002147;
+  /* Text color adjusted for better visibility */
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  color: #002147;
+  /* Text color adjusted for better visibility */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.footer-links,
+.footer-contact {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 10px;
+}
+
+.footer-links li a,
+.footer-contact li a {
+  color: #002147;
+  /* Adjusted color for better visibility */
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footer-links li a:hover,
+.footer-contact li a:hover {
+
+  font-weight: bold;
+  color: #FFCB05;
+}
+
+.footer-social a {
+  color: #002147;
+  /* Social icons color */
+  margin-right: 15px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+  color: #FFCB05;
+  /* Hover color for social icons */
+}
+
+.footer-divider {
+  border-color: #002147;
+  /* Divider color */
+  margin: 20px 0;
+}
+
+.text-center p {
+  color: #002147;
+  /* Adjusted color for better visibility */
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 0;
+  }
+
+  .footer-title {
+    font-size: 1.1rem;
+  }
+
+  .footer-logo {
+    width: 140px;
+    /* Smaller logo size on mobile */
+  }
+
+  .footer-social a {
+    font-size: 1.3rem;
+    margin-right: 10px;
+  }
+}

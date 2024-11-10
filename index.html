@@ -15,12 +15,20 @@
   <!-- Link Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css" />
+
+
+
+
+
+  <link rel="stylesheet" href="css\styles.css" />
   <style>
     body {
-      font-family: "Nunito", sans-serif;
+      font-family: 'Montserrat', sans-serif;
     }
+
+
 
     .package-card:hover {
       transform: scale(1.05);
@@ -30,12 +38,27 @@
 </head>
 
 <!-- starting of body ------------------------------------------------------------------------------------------------------------- -->
-<!-- starting of body ------------------------------------------------------------------------------------------------------------- -->
 
 <body>
+  <div id="preloader">
+    <div class="globe-container">
+      <div class="globe">
+        <img src="img/travel.gif" alt="Rotating Globe" class="globe-image">
+      </div>
+      <!-- <div class="vehicle car">
+        <img src="img/car.png" alt="Rotating Globe" class="globe-image">
+      </div>
+      <div class="vehicle plane">
+        <img src="img/plane.png" alt="Rotating Globe" class="globe-image">
+      </div> -->
+    </div>
+  </div>
+
+
   <div class="all-content">
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white ">
+        <!-- add "fixed-top" class in nav bar to activate the fixed navbar effect , and ensure the in css the position:fixed; -->
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             <img src="img/logo.png" alt="Logo" class="logo">
@@ -47,20 +70,21 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="#home">Home</a>
+                <a class="nav-link active" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#services">Services</a>
+                <a class="nav-link " href="rental.html">Explore</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#explore">Explore</a>
+                <a class="nav-link" href="aboutus.html">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#about">About Us</a>
+                <a class="nav-link" href="contactus.html">Contact Us</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact Us</a>
+              <li class="nav-item ">
+                <a class="nav-link" href="feedback.html">Feedback</a>
               </li>
+
             </ul>
           </div>
         </div>
@@ -69,27 +93,68 @@
 
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="container text-center text-white">
-        <h1>Welcome to Mithu Holidays</h1>
-        <p style=>Your one-stop solution for premium car rentals and unforgettable holiday experiences.
-        </p>
-        <a href="#packages" class="btn btn-lg learn-more">Explore Packages</a>
-        <a href="#services" class="btn btn-lg learn-more">Book a Car</a>
-      </div>
-    </section>
-
-    <!--banner section -->
-    <section class="banner" id="banner">
-      <div class="container-fluid">
-        <img src="img/car1.png" alt="Banner Image" class="img-fluid banner-image">
-        <div class="banner-text">
-          <h1>Discover Incredible India</h1>
-          <p>Travel across India's most beautiful destinations with our premium car rental services. From the hills of
-            Himachal to the beaches of Goa, we ensure a smooth ride.</p>
+    <section id="home" class="hero"
+      style="background-image: url('img/ash.png'); background-size: cover; background-position: center;">
+      <div class="container text-center hero-text" style="padding: 150px 0;">
+        <div class="translucent-box">
+          <h1 style="color: #fdfdfd;">
+            Discover the World with Mithu Holidays
+          </h1>
+          <p style="color: #2F2959; font-size: 1.25rem; font-weight: bolder;">
+            Your Journey Begins Here – Premium Travel and Car Rentals
+          </p>
+          <div class="hero-buttons" style="margin-top: 20px;">
+            <a href="rental.html" class="btn btn-lg banner-button">Book a Car</a>
+            <a href="rental.html #package-details" class="btn btn-lg banner-button ">Explore</a>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- #f2cf46 -->
+
+    <!-- Contact and Headline Section -->
+    <section class="contact-headline-section">
+      <div class="container">
+        <div class="contact-call-wrapper">
+          <div class="contact-details">
+            <h3>Contact us for Booking Enquiries</h3>
+          </div>
+          <div class="call-details">
+            <p style="padding-right: 10px;">Call Us Now:</p>
+            <p class="contact-number">97901-53339</p>
+          </div>
+        </div>
+        <div class="headline">
+          <h2>Where Every Journey Begins with Care and Convenience</h2>
+
+          <p>Our commitment to quality service and customer satisfaction sets us apart. Whether you need a car for a day
+            or a
+            fully planned travel experience, MithuHolidays is here to make your trip smooth and enjoyable.</p>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- New Banner Section -->
+    <section class="banner" id="banner">
+      <div class="banner-container">
+        <img src="img/car1.jpg" alt="Explore Destinations" class="banner-image">
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+          <h1 class="banner-title">Explore the World with Us</h1>
+          <p class="banner-subtitle" style="text-align: justify;">Unforgettable journeys at your fingertips.From amazing
+            beaches of Goa to back
+            waters of Kerala. Explore MithuHolidays for more.</p>
+          <a href="rental.html" class="btn btn-lg banner-button">Discover More</a>
+        </div>
+      </div>
+    </section>
+
+
+
 
     <!-- value propotion -->
     <section class="value-proposition" style="background-color: transparent;">
@@ -99,18 +164,22 @@
           why you should choose us:</p>
         <div class="features">
           <div class="feature">
+            <i class="fa-solid fa-sack-dollar v-icon"></i>
             <h3>Affordable Pricing</h3>
             <p>Get competitive rates without compromising quality. Our transparent pricing means no hidden fees.</p>
           </div>
           <div class="feature">
+            <i class="fa-solid fa-car v-icon"></i>
             <h3>Quality Vehicles</h3>
             <p>All our vehicles are well-maintained, ensuring a safe and comfortable journey.</p>
           </div>
           <div class="feature">
+            <i class="fa-solid fa-headset v-icon"></i>
             <h3>24/7 Customer Support</h3>
             <p>Our dedicated team is available around the clock to assist you with any questions or concerns.</p>
           </div>
           <div class="feature">
+            <i class="fa-solid fa-clipboard-list v-icon"></i>
             <h3>Flexible Booking</h3>
             <p>Book your vehicle easily online, with options for changes and cancellations that suit your schedule.</p>
           </div>
@@ -118,141 +187,85 @@
       </div>
     </section>
 
-    <!-- package-detials -->
-    <div class="py-5 package-details">
-      <h1 class="text-center display-4 font-weight-bold mb-4" style="color: #2F2959;">
-        Tour Packages
-      </h1>
-      <p class="text-center text-muted mb-5">
-        We offer the best customized tour & holiday packages to explore your destinations.
-      </p>
-      <div class="row">
-        <div class="col-md-6 col-lg-3 mb-4">
-          <div class="card package-card shadow-sm h-100">
-            <img src="img/ooty.jpg" class="card-img-top" alt="Scenic view of Ooty hill station" />
-            <div class="card-body">
-              <h5 class="card-title">Ooty Tour Package</h5>
-              <p class="card-text">
-                Ooty is one of the best and paradise hill stations for couples, families, corporates, and groups.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-4">
-          <div class="card package-card shadow-sm h-100">
-            <img src="img/munnar.jpg" class="card-img-top" alt="Scenic view of Munnar hill station" />
-            <div class="card-body">
-              <h5 class="card-title">Munnar Tour Package</h5>
-              <p class="card-text">
-                Munnar is a pleasant and wonderful climate hill station to make your vacation memorable.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-4">
-          <div class="card package-card shadow-sm h-100">
-            <img src="img/alleppey.jpg" class="card-img-top" alt="Houseboat in Alleppey backwaters" />
-            <div class="card-body">
-              <h5 class="card-title">Alleppey Tour Package</h5>
-              <p class="card-text">
-                Enjoy your holidays in Alleppey houseboat cruises, backwater canals, and beaches.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-4">
-          <div class="card package-card shadow-sm h-100">
-            <img src="img/valparai.jpg" class="card-img-top" alt="Scenic view of Valparai hill station" />
-            <div class="card-body">
-              <h5 class="card-title">Valparai Tour Package</h5>
-              <p class="card-text">
-                A pleasant hill station to explore dense forests, tea plantations, dams, and waterfalls.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
   </div>
 
-  <!-- Bootstrap JS, Popper.js, and jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <script src="script.js"></script>
-  <!-- Include Typed.js from CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 
 </body>
-<footer>
-  <div class="container py-5">
-    <div class="row align-items-center">
-      <!-- Logo and Title Section -->
-      <div class="col-lg-4 d-flex align-items-center mb-4 mb-lg-0">
-        <img src="img\logo.png" alt="SK Travels logo" class="img-fluid" style="height: 80px; width: auto" />
-        <span class="ml-3 h4 text-primary font-weight-bold"></span>
+
+<!-- footer -->
+
+<footer class="footer py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Logo Section -->
+      <div class="col-md-3 text-center text-md-left">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Company Logo" class="footer-logo mb-3">
+        </a>
+        <p class="footer-about-text">
+          Your trusted travel partner. Explore premium car rentals and holiday packages with us. Start your next
+          adventure today!
+        </p>
       </div>
 
-      <!-- Tour Packages Column -->
-      <div class="col-md-4 mb-4 mb-md-0">
-        <h2 class="h5  font-weight-bold" style="color: #000000 ;">Tour Packages</h2>
-        <hr class="border-warning w-25 my-2" />
-        <ul class="list-unstyled">
-          <li class="d-flex align-items-center mb-2">
-            <i class="fas fa-chevron-right text-secondary mr-2 contact-icon"></i>
-            <span style="color:#000000">Ooty Tour Package</span>
-          </li>
-          <li class="d-flex align-items-center mb-2">
-            <i class="fas fa-chevron-right text-secondary mr-2 contact-icon"></i>
-            <span style="color:#000000">Kodaikanal Tour Package</span>
-          </li>
-          <li class="d-flex align-items-center mb-2">
-            <i class="fas fa-chevron-right text-secondary mr-2 contact-icon"></i>
-            <span style="color:#000000">Munnar Tour Package</span>
-          </li>
-          <li class="d-flex align-items-center mb-2">
-            <i class="fas fa-chevron-right text-secondary mr-2 contact-icon"></i>
-            <span style="color:#000000">Alleppey Tour Package</span>
-          </li>
-          <li class="d-flex align-items-center mb-2">
-            <i class="fas fa-chevron-right text-secondary mr-2 contact-icon"></i>
-            <span style="color:#000000">Navagraha Tour Package</span>
+      <!-- Quick Links -->
+      <div class="col-md-3">
+        <h5 class="footer-title">Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3">
+        <h5 class="footer-title">Contact Info</h5>
+        <ul class="footer-contact">
+          <li><i class="fas fa-phone-alt"></i> <a href="tel:+919790153339">+91 9790153339</a></li>
+          <li><i class="fas fa-envelope"></i> <a
+              href="mailto:mithuholidays3339@gmail.com">mithuholidays3339@gmail.com</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> <a href="https://goo.gl/maps/yourlocation" target="_blank">3F, SM
+              PALAYAM, G.N.MILLS, CBE-641029</a></li>
+          <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/919790153339" target="_blank">+91 9790153339</a>
           </li>
         </ul>
       </div>
 
-      <!-- Contact Column -->
-      <div class="col-md-4">
-        <h2 class="h5  font-weight-bold" style="color: #000000;">Contact</h2>
-        <hr class="border-warning w-25 my-2" />
-        <ul class="list-unstyled">
-          <li class="d-flex align-items-center mb-2">
-            <i class="fas fa-map-marker-alt text-warning mr-2 contact-icon"></i>
-            <span style="color:#000000">3F, SM PALAYAM, NEAR INDIANOIL, G.N.MILLS, CBE-641029</span>
-          </li>
-          <li class="d-flex align-items-center mb-2">
-            <i class="fas fa-envelope text-warning mr-2 contact-icon"> </i>
-            <span style="color:#000000">mithuholidays3339@gmail.com</span>
-          </li>
-          <li class="d-flex align-items-center mb-2">
-            <i class="fas fa-phone-alt text-warning mr-2 contact-icon"> </i>
-            <span style="color:#000000">+91 9790153339, +91 7200588181</span>
-          </li>
-          <li class="d-flex align-items-center">
-            <i class="fab fa-whatsapp text-warning mr-2 contact-icon"></i>
-            <span style="color:#000000">+91 9790153339</span>
-          </li>
-        </ul>
+      <!-- Social Media -->
+      <div class="col-md-3">
+        <h5 class="footer-title">Follow Us</h5>
+        <div class="footer-social">
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/mithuholidays3339?igsh=d2VmbXV4aXBtcjlp" target="_blank"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
       </div>
-      <p style="text-align: center; color: black; margin-top: 70px;">copyrights reserved to mithuholidays &#169</p>
+    </div>
+    <hr class="footer-divider">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p>&copy; 2024 Mithu Holidays. All rights reserved.</p>
+      </div>
     </div>
   </div>
-  </div>
-  </div>
 </footer>
+
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+<!-- Include Typed.js from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
 
 </html>

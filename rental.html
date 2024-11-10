@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mithu holidays</title>
+  <link rel="shortcut icon" href="img\icon.png" type="image/x-icon">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <!-- Link Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- css file -->
+  <link href="css/rental.css" rel="stylesheet" />
+
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white ">
+      <!-- add "fixed-top" class in nav bar to activate the fixed navbar effect , and ensure the in css the position:fixed; -->
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.png" alt="Logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link active" href="rental.html">Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html">Contact Us</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="feedback.html">Feedback</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- call to action banner -->
+  <section class="cta-banner py-5 text-center">
+    <div class="container">
+      <h2>Ready to Start Your Adventure?</h2>
+      <a href="rental.html#rent" class="btn btn-primary">Explore Rentals</a>
+    </div>
+  </section>
+  <!-- testimonial section -->
+
+  <section class="testimonials-section py-5">
+    <div class="container">
+      <h2 class="text-center">What Our Customers Say</h2>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <blockquote class="blockquote text-center">
+              <p class="mb-0">Mithu Holidays made our vacation unforgettable. Excellent service and friendly staff!</p>
+              <footer class="blockquote-footer">Adhvik, <cite title="Source Title">Traveler</cite></footer>
+            </blockquote>
+          </div>
+          <div class="carousel-item">
+            <blockquote class="blockquote text-center">
+              <p class="mb-0">The rental experience was smooth and comfortable. Highly recommended!</p>
+              <footer class="blockquote-footer">Janu Priya, <cite title="Source Title">Business Traveler</cite></footer>
+            </blockquote>
+          </div>
+          <div class="carousel-item">
+            <blockquote class="blockquote text-center">
+              <p class="mb-0">Professional and reliable services. We will definitely book again!</p>
+              <footer class="blockquote-footer">Ashwin, <cite title="Source Title">Corporate Client</cite>
+              </footer>
+            </blockquote>
+          </div>
+          <div class="carousel-item">
+            <blockquote class="blockquote text-center">
+              <p class="mb-0">Very satisfied customer service!</p>
+              <footer class="blockquote-footer">Vignesh, <cite title="Source Title">Corporate Client</cite>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="rental-section py-5" id="rent">
+    <div class="container">
+      <h2 class="text-center mb-4">Available Cars for Rent</h2>
+
+      <!-- Carousel for PC/Laptop -->
+      <div id="carCarousel" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <!-- Tempo Traveler -->
+              <div class="col-md-4">
+                <div class="card-container" onclick="flipCard(this)">
+                  <div class="card-flip">
+                    <div class="card-front">
+                      <img src="img/tempo.jpg" alt="Tempo Traveller" class="card-img-top">
+                      <div class="card-body">
+                        <h5 class="card-title">Tempo Traveler</h5>
+                        <p class="flip-indicator">Click to Flip</p>
+                      </div>
+                    </div>
+                    <div class="card-back">
+                      <div class="card-body">
+                        <h5 class="card-title">Choose Type</h5>
+                        <table id="tariffTable" class="table table-sm text-white mt-3">
+                          <tr>
+                            <td>Day Rent:</td>
+                            <td>₹3,500</td>
+                          </tr>
+                          <tr>
+                            <td>Rate per Kilometer:</td>
+                            <td>₹18/km</td>
+                          </tr>
+                        </table>
+                        <button class="btn btn-primary" onclick="bookNow('Tempo Traveler')">Book Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Force Urbania -->
+              <div class="col-md-4">
+                <div class="card-container" onclick="flipCard(this)">
+                  <div class="card-flip">
+                    <div class="card-front">
+                      <img src="img/urbania.jpg" alt="Force Urbania" class="card-img-top">
+                      <div class="card-body">
+                        <h5 class="card-title">Force Urbania</h5>
+                        <p class="flip-indicator">Click to Flip</p>
+                      </div>
+                    </div>
+                    <div class="card-back">
+                      <div class="card-body">
+                        <h5 class="card-title">Tariff Details</h5>
+                        <table class="table table-sm text-white">
+                          <tr>
+                            <td>Day Rent:</td>
+                            <td>₹10,000 (100 km free)</td>
+                          </tr>
+                          <tr>
+                            <td>Extra Kilometers:</td>
+                            <td>₹38/km</td>
+                          </tr>
+                        </table>
+                        <button class="btn btn-primary" onclick="bookNow('Force Urbania')">Book Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Toyota Innova Crysta -->
+              <div class="col-md-4">
+                <div class="card-container" onclick="flipCard(this)">
+                  <div class="card-flip">
+                    <div class="card-front">
+                      <img src="img/innova.png" alt="Toyota Innova Crysta" class="card-img-top">
+                      <div class="card-body">
+                        <h5 class="card-title">Toyota Innova Crysta</h5>
+                        <p class="flip-indicator">Click to Flip</p>
+                      </div>
+                    </div>
+                    <div class="card-back">
+                      <div class="card-body">
+                        <h5 class="card-title">Tariff Details</h5>
+                        <table class="table table-sm text-white">
+                          <tr>
+                            <td>Per Day Rent:</td>
+                            <td>₹3,000</td>
+                          </tr>
+                          <tr>
+                            <td>Running Kilometer Rate:</td>
+                            <td>₹14-19/km</td>
+                          </tr>
+                        </table>
+                        <button class="btn btn-primary" onclick="bookNow('Toyota Innova Crysta')">Book Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <!-- Mahindra XUV500 -->
+              <div class="col-md-4">
+                <div class="card-container" onclick="flipCard(this)">
+                  <div class="card-flip">
+                    <div class="card-front">
+                      <img src="img/sedan.jpg" alt="Mahindra XUV500" class="card-img-top">
+                      <div class="card-body">
+                        <h5 class="card-title">Sedan</h5>
+                        <p class="flip-indicator">Click to Flip</p>
+                      </div>
+                    </div>
+                    <div class="card-back">
+                      <div class="card-body">
+                        <h5 class="card-title">Tariff Details</h5>
+                        <table class="table table-sm text-white">
+                          <tr>
+                            <td>Per Day Rent:</td>
+                            <td>₹2,000</td>
+                          </tr>
+                          <tr>
+                            <td>Running Kilometer Rate:</td>
+                            <td>₹12/km</td>
+                          </tr>
+                        </table>
+                        <button class="btn btn-primary" onclick="bookNow('Sedan')">Book Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#carCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
+
+      <!-- Stacked view for mobile (visible only on mobile) -->
+      <div class="d-block d-md-none">
+        <!-- Tempo Traveler -->
+        <div class="card-container" onclick="flipCard(this)">
+          <div class="card-flip">
+            <div class="card-front">
+              <img src="img/tempo.jpg" alt="Tempo Traveller" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Tempo Traveler</h5>
+                <p class="flip-indicator">Click to Flip</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="card-body">
+                <h5 class="card-title">Choose Type</h5>
+                <table id="tariffTable" class="table table-sm text-white mt-3">
+                  <tr>
+                    <td>Day Rent:</td>
+                    <td>₹3,500</td>
+                  </tr>
+                  <tr>
+                    <td>Rate per Kilometer:</td>
+                    <td>₹18/km</td>
+                  </tr>
+                </table>
+                <button class="btn btn-primary" onclick="bookNow('Tempo Traveler')">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Force Urbania -->
+        <div class="card-container" onclick="flipCard(this)">
+          <div class="card-flip">
+            <div class="card-front">
+              <img src="img/urbania.jpg" alt="Force Urbania" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Force Urbania</h5>
+                <p class="flip-indicator">Click to Flip</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="card-body">
+                <h5 class="card-title">Tariff Details</h5>
+                <table class="table table-sm text-white">
+                  <tr>
+                    <td>Day Rent:</td>
+                    <td>₹10,000 (100 km free)</td>
+                  </tr>
+                  <tr>
+                    <td>Extra Kilometers:</td>
+                    <td>₹38/km</td>
+                  </tr>
+                </table>
+                <button class="btn btn-primary" onclick="bookNow('Force Urbania')">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Toyota Innova Crysta -->
+        <div class="card-container" onclick="flipCard(this)">
+          <div class="card-flip">
+            <div class="card-front">
+              <img src="img/innova.png" alt="Toyota Innova Crysta" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Toyota Innova Crysta</h5>
+                <p class="flip-indicator">Click to Flip</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="card-body">
+                <h5 class="card-title">Tariff Details</h5>
+                <table class="table table-sm text-white">
+                  <tr>
+                    <td>Per Day Rent:</td>
+                    <td>₹3,000</td>
+                  </tr>
+                  <tr>
+                    <td>Running Kilometer Rate:</td>
+                    <td>₹14-19/km</td>
+                  </tr>
+                </table>
+                <button class="btn btn-primary" onclick="bookNow('Toyota Innova Crysta')">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Sedan -->
+        <div class="card-container" onclick="flipCard(this)">
+          <div class="card-flip">
+            <div class="card-front">
+              <img src="img/sedan.jpg" alt="Sedan" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Swift-Dzire</h5>
+                <p class="flip-indicator">Click to Flip</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <div class="card-body">
+                <h5 class="card-title">Tariff Details</h5>
+                <table class="table table-sm text-white">
+                  <tr>
+                    <td>Per Day Rent:</td>
+                    <td>₹2,000</td>
+                  </tr>
+                  <tr>
+                    <td>Running Kilometer Rate:</td>
+                    <td>₹12/km</td>
+                  </tr>
+                </table>
+                <button class="btn btn-primary" onclick="bookNow('Sedan')">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- package-detials -->
+  <div class="py-5 package-details" id="package-details">
+    <h1 class="text-center display-4 font-weight-bold mb-4" style="color: #2F2959;">
+      Tour Packages
+    </h1>
+    <p class="text-center text-muted mb-5">
+      We offer the best customized tour & holiday packages to explore your destinations.
+    </p>
+    <div class="row">
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card package-card shadow-sm h-100">
+          <img src="img/ooty.jpg" class="card-img-top" alt="Scenic view of Ooty hill station" />
+          <div class="card-body">
+            <h5 class="card-title">Ooty Tour Package</h5>
+            <p class="card-text">
+              Ooty is one of the best and paradise hill stations for couples, families, corporates, and groups.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card package-card shadow-sm h-100">
+          <img src="img/munnar.jpg" class="card-img-top" alt="Scenic view of Munnar hill station" />
+          <div class="card-body">
+            <h5 class="card-title">Munnar Tour Package</h5>
+            <p class="card-text">
+              Munnar is a pleasant and wonderful climate hill station to make your vacation memorable.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card package-card shadow-sm h-100">
+          <img src="img/alleppey.jpg" class="card-img-top" alt="Houseboat in Alleppey backwaters" />
+          <div class="card-body">
+            <h5 class="card-title">Alleppey Tour Package</h5>
+            <p class="card-text">
+              Enjoy your holidays in Alleppey houseboat cruises, backwater canals, and beaches.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card package-card shadow-sm h-100">
+          <img src="img/valparai.jpg" class="card-img-top" alt="Scenic view of Valparai hill station" />
+          <div class="card-body">
+            <h5 class="card-title">Valparai Tour Package</h5>
+            <p class="card-text">
+              A pleasant hill station to explore dense forests, tea plantations, dams, and waterfalls.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- facts section -->
+  <section class="rental-facts py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Interesting Facts About Rental Cars</h2>
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <i class="fas fa-car fa-3x mb-3" style="color:#002147;"></i>
+          <h4>Convenient Travel</h4>
+          <p>Rental cars offer the freedom to travel at your own pace and visit remote locations without relying on
+            public
+            transport.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-map-signs fa-3x mb-3" style="color:#002147;"></i>
+          <h4>Flexible Itineraries</h4>
+          <p>With a rental car, you can easily change plans and adapt to new opportunities or challenges during your
+            journey.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-gas-pump fa-3x mb-3" style="color:#002147;"></i>
+          <h4>Fuel-Efficient Options</h4>
+          <p>Many rental companies offer fuel-efficient or hybrid vehicles, helping you save money and reduce your
+            carbon
+            footprint.</p>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-4 text-center">
+          <i class="fas fa-money-bill-wave fa-3x mb-3" style="color:#002147;"></i>
+          <h4>Cost-Effective for Group Travel</h4>
+          <p>For group trips, rental cars can be more affordable than buying multiple tickets for public transportation.
+          </p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-shield-alt fa-3x mb-3" style="color:#002147;"></i>
+          <h4>Insurance Coverage</h4>
+          <p>Rental cars often come with insurance options, providing peace of mind in case of accidents or damages.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-globe-americas fa-3x mb-3" style="color:#002147;"></i>
+          <h4>Global Access</h4>
+          <p>With international rental companies, you can easily rent a car in almost any country, offering global
+            accessibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+</body>
+
+<!-- footer -->
+<footer class="footer py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Logo Section -->
+      <div class="col-md-3 text-center text-md-left">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Company Logo" class="footer-logo mb-3">
+        </a>
+        <p class="footer-about-text">
+          Your trusted travel partner. Explore premium car rentals and holiday packages with us. Start your next
+          adventure today!
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-3">
+        <h5 class="footer-title">Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Explore</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3">
+        <h5 class="footer-title">Contact Info</h5>
+        <ul class="footer-contact">
+          <li><i class="fas fa-phone-alt"></i> <a href="tel:+919790153339">+91 9790153339</a></li>
+          <li><i class="fas fa-envelope"></i> <a
+              href="mailto:mithuholidays3339@gmail.com">mithuholidays3339@gmail.com</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> <a href="https://goo.gl/maps/yourlocation" target="_blank">3F, SM
+              PALAYAM, G.N.MILLS, CBE-641029</a></li>
+          <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/919790153339" target="_blank">+91 9790153339</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-3">
+        <h5 class="footer-title">Follow Us</h5>
+        <div class="footer-social">
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/mithuholidays3339?igsh=d2VmbXV4aXBtcjlp" target="_blank"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p>&copy; 2024 Mithu Holidays. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- scripts -->
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+<script src="rental.js"></script>
+<!-- Include Typed.js from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+</html>

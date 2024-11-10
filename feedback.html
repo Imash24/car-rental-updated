@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mithu Holidays</title>
+  <link rel="shortcut icon" href="img\icon.png" type="image/x-icon">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <!-- Link Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css\contactus.css" />
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .package-card:hover {
+      transform: scale(1.05);
+      transition: transform 0.5s;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white ">
+      <!-- add "fixed-top" class in nav bar to activate the fixed navbar effect , and ensure the in css the position:fixed; -->
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.png" alt="Logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="rental.html">Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html">Contact Us</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link active" href="feedback.html">Feedback</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section id="feedback" class="feedback-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-4" style="color: #2F2959;">We Value Your Feedback</h2>
+      <p class="text-center mb-4">Please share your thoughts or suggestions to help us improve our services.</p>
+      <form id="feedbackForm" class="form" onsubmit="sendEmail(); reset(); return false">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Your Name" required />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Your Email" required />
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="feedbackType" class="form-label">Feedback Type</label>
+          <select class="form-select" id="feedbackType" required>
+            <option value="" disabled selected>Select Feedback Type</option>
+            <option value="general">General Feedback</option>
+            <option value="service">Service Quality</option>
+            <option value="website">Website Experience</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="comments" class="form-label">Comments</label>
+          <textarea class="form-control" id="comments" rows="4" placeholder="Your Feedback" required></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" id="feedback-button" class="btn btn-light">Submit Feedback</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</body>
+
+<!-- footer -->
+<footer class="footer py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Logo Section -->
+      <div class="col-md-3 text-center text-md-left">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Company Logo" class="footer-logo mb-3">
+        </a>
+        <p class="footer-about-text">
+          Your trusted travel partner. Explore premium car rentals and holiday packages with us. Start your next
+          adventure today!
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-3">
+        <h5 class="footer-title">Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3">
+        <h5 class="footer-title">Contact Info</h5>
+        <ul class="footer-contact">
+          <li><i class="fas fa-phone-alt"></i> <a href="tel:+919790153339">+91 9790153339</a></li>
+          <li><i class="fas fa-envelope"></i> <a
+              href="mailto:mithuholidays3339@gmail.com">mithuholidays3339@gmail.com</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> <a href="https://goo.gl/maps/yourlocation" target="_blank">3F, SM
+              PALAYAM, G.N.MILLS, CBE-641029</a></li>
+          <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/919790153339" target="_blank">+91 9790153339</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-3">
+        <h5 class="footer-title">Follow Us</h5>
+        <div class="footer-social">
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/mithuholidays3339?igsh=d2VmbXV4aXBtcjlp" target="_blank"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p>&copy; 2024 Mithu Holidays. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="feedback.js"></script>
+<!-- Include Typed.js from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+</html>

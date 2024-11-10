@@ -1,0 +1,459 @@
+body {
+  background-color: #ffffff;
+  color: #212529;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+/* feedback section */
+.feedback-section {
+  margin-bottom: 10px;
+  background-color: #f8f9fa;
+  /* Light background for contrast */
+  padding: 60px 0;
+}
+
+.feedback-section h2 {
+  font-size: 2.5rem;
+  color: #2F2959;
+  margin-bottom: 20px;
+}
+
+.feedback-section p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #2F2959;
+}
+
+.form-control {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: #FFCB05;
+  /* Yellow background */
+  color: #002147;
+  /* Navy text */
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #2F2959;
+  /* Navy blue on hover */
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .feedback-section {
+    padding: 40px 0;
+  }
+
+  .feedback-section h2 {
+    font-size: 2rem;
+  }
+
+  .feedback-section p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Contact Us Page Specific Styling */
+.contact-section {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  color: #2F2959;
+  margin-bottom: 40px;
+}
+
+.contact-section h4 {
+  color: #2F2959;
+  margin-bottom: 20px;
+}
+
+.contact-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-section ul li {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.contact-section ul li i {
+  margin-right: 10px;
+  color: #FFCB05;
+}
+
+.contact-section .form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section .form .form-label {
+  color: #2F2959;
+  font-weight: bold;
+}
+
+.contact-section .form .form-control {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.contact-section .form .btn {
+  background-color: #FFCB05;
+  color: #002147;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section .form .btn:hover {
+  background-color: #2F2959;
+  color: white;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: transparent;
+  /* Clear/transparent background */
+  color: #002147;
+  /* Adjust text color to maintain contrast */
+  padding: 40px 0;
+  border-top: #2F2959 2px solid;
+  font-family: "Nunito", sans-serif;
+}
+
+.footer-logo {
+  width: 180px;
+  /* Adjust the logo size */
+  height: auto;
+}
+
+.footer-about-text {
+  color: #002147;
+  /* Text color adjusted for better visibility */
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  color: #002147;
+  /* Text color adjusted for better visibility */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.footer-links,
+.footer-contact {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 10px;
+}
+
+.footer-links li a,
+.footer-contact li a {
+  color: #002147;
+  /* Adjusted color for better visibility */
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footer-links li a:hover,
+.footer-contact li a:hover {
+
+  font-weight: bold;
+  color: #FFCB05;
+}
+
+.footer-social a {
+  color: #002147;
+  /* Social icons color */
+  margin-right: 15px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+  color: #FFCB05;
+  /* Hover color for social icons */
+}
+
+.footer-divider {
+  border-color: #002147;
+  /* Divider color */
+  margin: 20px 0;
+}
+
+.text-center p {
+  color: #002147;
+  /* Adjusted color for better visibility */
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 0;
+  }
+
+  .footer-title {
+    font-size: 1.1rem;
+  }
+
+  .footer-logo {
+    width: 140px;
+    /* Smaller logo size on mobile */
+  }
+
+  .footer-social a {
+    font-size: 1.3rem;
+    margin-right: 10px;
+  }
+}
+
+/* Navbar Styling */
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.navbar {
+  background-color: white;
+  /* White background */
+  padding: 10px 20px;
+  /* Adjust padding to control the height */
+  /* position: fixed; */
+  /* Fixes navbar at the top */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Optional shadow for better visibility */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  /* Make links larger */
+  font-weight: bold;
+  /* Optional: Make text bold */
+  color: #2F2959;
+  /* transition: color 0.3s; */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #FFCB05;
+  /* Hover color */
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #FFCB05;
+  /* Line under active link */
+  animation: slideIn 0.5s ease forwards;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px;
+  /* Space out the items */
+}
+
+.nav-link.active {
+  position: relative;
+  color: #FFCB05 !important;
+  /* Change color for active link */
+}
+
+.logo {
+  width: 250px;
+  /* Adjust logo size as needed */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+/* Optional: Smooth scroll offset for fixed navbar */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* temporary */
+.contact-section {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  color: #2F2959;
+  margin-bottom: 40px;
+}
+
+.contact-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-icon {
+  font-size: 3rem;
+  color: #2F2959;
+  margin-bottom: 15px;
+}
+
+.contact-title {
+  font-size: 1.5rem;
+  color: #2F2959;
+  margin-bottom: 10px;
+}
+
+.contact-card p a {
+  font-size: 1rem;
+  color: #000000;
+  text-decoration: none;
+  font-weight: normal
+}
+
+.contact-card p a:hover {
+  text-decoration: underline;
+}
+
+/* .contact-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-section ul li {
+  margin-bottom: 10px;
+}
+
+.contact-section ul li i {
+  margin-right: 10px;
+}
+
+.contact-section ul li a,
+.contact-section ul li span {
+  color: #2F2959;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contact-section ul li a:hover,
+.contact-section ul li span:hover {
+  text-decoration: underline;
+} */
+
+.form {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form button[type="submit"] {
+  background-color: #2F2959;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form button[type="submit"]:hover {
+  background-color: #333;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 0;
+  }
+
+  .contact-section h2 {
+    font-size: 2rem;
+  }
+
+  .contact-card {
+    padding: 15px;
+  }
+
+  .contact-title {
+    font-size: 1.3rem;
+  }
+
+  .contact-card p a {
+    font-size: 0.9rem;
+  }
+}
+
+/* FAQ SECTION */
+.faq-section {
+  background-color: #ffffff;
+  padding: 60px 0;
+  margin-top: 10px;
+}
+
+.accordion-button {
+  color: #2F2959;
+  background-color: #f8f9fa;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #FFCB05;
+  background-color: #2F2959;
+}
+
+.accordion-body {
+  font-size: 1rem;
+  color: #555;
+}

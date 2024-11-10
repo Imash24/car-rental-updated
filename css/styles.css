@@ -1,0 +1,760 @@
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.globe-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.globe {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.globe-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: rotate-globe 8s linear infinite;
+}
+
+@keyframes rotate-globe {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.vehicle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.car {
+  background-image: url('img/car.png');
+  animation: move-car 6s linear infinite;
+}
+
+.plane {
+  background-image: url('img/plane.png');
+  animation: move-plane 6s linear infinite;
+  top: -40px;
+  /* Adjust for plane's orbit */
+}
+
+@keyframes move-car {
+  0% {
+    transform: rotate(0deg) translateX(120px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(120px) rotate(-360deg);
+  }
+}
+
+@keyframes move-plane {
+  0% {
+    transform: rotate(0deg) translateX(120px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(120px) rotate(-360deg);
+  }
+}
+
+#preloader.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  visibility: hidden;
+}
+
+/* General styling */
+body {
+  background-color: #ffffff;
+  color: #212529;
+  margin: 0;
+  padding: 0;
+
+  background-color: #ffffff;
+}
+
+
+/* Welcome Section Styling */
+.welcome {
+  background-color: #ddd;
+  height: 300px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  /* Center the text */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome h1 {
+  color: #FFCB05;
+  /* Change this to match your desired color */
+  font-size: 3rem;
+}
+
+#welcome-typed-text {
+  font-size: 1.5rem;
+  color: #ffffff;
+  /* Adjust to match the contrast */
+}
+
+/* Navbar Styling ....................................................*/
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.navbar {
+  background-color: #ffffff;
+  /* White background */
+  padding: 10px 20px;
+  /* Adjust padding to control the height */
+  /* position: fixed; */
+  /* Fixes navbar at the top */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Optional shadow for better visibility */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  /* Make links larger */
+  font-weight: bold;
+  /* Optional: Make text bold */
+  color: #2F2959;
+  /* transition: color 0.3s; */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #FFCB05;
+  /* Hover color */
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #FFCB05;
+  /* Line under active link */
+  animation: slideIn 0.5s ease forwards;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 20px;
+  /* Space out the items */
+}
+
+.nav-link.active {
+  position: relative;
+  color: #FFCB05 !important;
+  /* Change color for active link */
+}
+
+.logo {
+  width: 250px;
+  /* Adjust logo size as needed */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+/* Optional: Smooth scroll offset for fixed navbar */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Buttons */
+.learn-more,
+.btn {
+  background-color: #fdfdfd;
+  /* Yellow */
+  color: #002147;
+  /* Navy text */
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.learn-more:hover {
+  background-color: #2F2959;
+  /* Navy blue on hover */
+  color: #ffffff;
+}
+
+.btn:hover {
+  background-color: #2F2959;
+  /* Navy blue on hover */
+  color: #ffffff;
+}
+
+
+.contact-icon:hover {
+  color: #FFCB05;
+  /* Yellow on hover */
+}
+
+
+.carousel-caption h5 {
+  font-size: 3rem;
+  color: #FFCB05;
+  /* Yellow */
+}
+
+.carousel-caption p {
+  font-size: 1.5rem;
+  color: #949494;
+  /* White for text */
+}
+
+/* Hero Section */
+.hero {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  /* Ensure padding is large enough */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero .banner-button:hover {
+  background-color: white;
+  color: #2F2959;
+
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: #dcdcdc;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: #FFCB05;
+}
+
+.hero-buttons .btn {
+  margin: 10px;
+  background-color: #2F2959;
+  color: #fdfdfd;
+  border-radius: 8px;
+}
+
+.hero-text h1 {
+  font-weight: bolder;
+}
+
+/* Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+  .hero-text {
+    padding: 100px 0;
+    /* Reduce padding for small screens */
+  }
+
+  .hero-text h1 {
+    color: #fdfdfd;
+    /* Bold, trustworthy navy color */
+    font-size: 3rem;
+    /* Heading size */
+  }
+
+  .hero-text p {
+    color: #2F2959;
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+
+  .hero-buttons .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Translucent Box */
+.translucent-box {
+  background-color: rgba(208, 208, 208, 0.345);
+  /* White with 70% opacity */
+  padding: 30px;
+  /* Space inside the box */
+  border-radius: 10px;
+  /* Rounded corners for a smooth look */
+  display: inline-block;
+  /* To only wrap the content */
+  max-width: 800px;
+  /* Limit the width of the box */
+  margin: 0 auto;
+  /* Center the box */
+}
+
+/* Optional: Add shadows for better visibility */
+.translucent-box {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Soft shadow for depth */
+}
+
+.hero-buttons a {
+  margin: 0 10px;
+  /* Space between the buttons */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .translucent-box {
+    padding: 20px;
+    max-width: 90%;
+    /* Shrink width on smaller screens */
+  }
+}
+
+/* Unified box for contact and call details */
+.contact-call-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  /* Ensures both boxes are the same height */
+  background-color: #ffffff;
+  /* Unified white background */
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+/* Equal height for contents */
+.contact-details,
+.call-details {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  /* Centers the content horizontally */
+  align-items: center;
+  /* Centers the content vertically */
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Background colors */
+.contact-details {
+  background-color: #FFCB05;
+  /* Navy blue */
+  color: #fff;
+
+}
+
+.call-details {
+  background-color: #2F2959;
+  color: #fff;
+}
+
+/* Text inside the boxes */
+.contact-details h3,
+.call-details p {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.contact-number {
+  font-size: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-call-wrapper {
+    flex-direction: column;
+    /* Stack the boxes vertically on small screens */
+  }
+
+  .contact-details,
+  .call-details {
+    padding: 15px;
+    /* Reduce padding on smaller screens */
+  }
+
+  /* Reduce font size on small screens */
+  .contact-details h3,
+  .call-details p {
+    font-size: 1.2rem;
+    /* Smaller font size */
+  }
+
+  .contact-number {
+    font-size: 1.5rem;
+    /* Smaller font size for the number */
+  }
+}
+
+/* Center the headline section and adjust spacing */
+.headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 0;
+  /* Add space above and below the section */
+  line-height: 1.6;
+  /* Adjust line height for decent spacing between lines */
+  margin: 30px auto;
+  /* Adds space between this section and others */
+  max-width: 800px;
+  /* Limit width for better readability */
+}
+
+/* Styling for the headline text */
+.headline h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #002147;
+  margin-bottom: 20px;
+  /* Adds space between heading and paragraph */
+}
+
+.headline p {
+  font-size: 1.2rem;
+  color: #2F2959;
+  /* Light gray for paragraph text */
+  margin-bottom: 0;
+  /* Optional: Remove bottom margin for a clean look */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .headline h2 {
+    font-size: 2rem;
+    /* Slightly smaller on mobile screens */
+  }
+
+  .headline p {
+    font-size: 1rem;
+    /* Adjust paragraph size on smaller screens */
+  }
+}
+
+/* Updated Banner Styles */
+.banner {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent black overlay */
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  /* Full height to center vertically */
+  color: #fff;
+  max-width: 800px;
+  /* Limit the width of the text */
+  padding: 0 20px;
+  /* Add padding for better appearance on smaller screens */
+}
+
+.banner-title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  /* Adjust line height for better readability */
+}
+
+.banner-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  /* Adjust line height for better readability */
+}
+
+.banner-button {
+  background-color: #f2cf46;
+  color: #002147;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.banner-button:hover {
+  background-color: #002147;
+  color: #f2cf46;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .banner-title {
+    font-size: 2.5rem;
+  }
+
+  .banner-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .banner-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .banner-content {
+    max-width: 90%;
+    /* Allow the text to be slightly wider on small screens */
+  }
+}
+
+/* value- proposition styling */
+.value-proposition {
+  background-color: #f8f9fa;
+  /* Light background */
+  padding: 40px 20px;
+  text-align: center;
+
+}
+
+.value-proposition h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.v-icon {
+  color: #2F2959;
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.value-proposition p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  flex: 1 1 200px;
+  /* Flex-grow, flex-shrink, flex-basis */
+  transition: box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+  color: #FFCB05;
+  /* yellow */
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #2F2959;
+  margin-bottom: 15px;
+}
+
+/* learnmore button */
+
+.learn-more {
+  background-color: #FFCB05;
+  /* Blue button */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.learn-more:hover {
+  background-color: #0056b3;
+  /* Darker blue on hover */
+}
+
+
+/* Footer Styling */
+.footer {
+  background-color: transparent;
+  /* Clear/transparent background */
+  color: #002147;
+  /* Adjust text color to maintain contrast */
+  padding: 40px 0;
+  border-top: #2F2959 2px solid;
+  font-family: "Nunito", sans-serif;
+}
+
+.footer-logo {
+  width: 180px;
+  /* Adjust the logo size */
+  height: auto;
+}
+
+.footer-about-text {
+  color: #002147;
+  /* Text color adjusted for better visibility */
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  color: #002147;
+  /* Text color adjusted for better visibility */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.footer-links,
+.footer-contact {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 10px;
+}
+
+.footer-links li a,
+.footer-contact li a {
+  color: #002147;
+  /* Adjusted color for better visibility */
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footer-links li a:hover,
+.footer-contact li a:hover {
+
+  font-weight: bold;
+  color: #FFCB05;
+}
+
+.footer-social a {
+  color: #002147;
+  /* Social icons color */
+  margin-right: 15px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+  color: #FFCB05;
+  /* Hover color for social icons */
+}
+
+.footer-divider {
+  border-color: #002147;
+  /* Divider color */
+  margin: 20px 0;
+}
+
+.text-center p {
+  color: #002147;
+  /* Adjusted color for better visibility */
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 0;
+  }
+
+  .footer-title {
+    font-size: 1.1rem;
+  }
+
+  .footer-logo {
+    width: 140px;
+    /* Smaller logo size on mobile */
+  }
+
+  .footer-social a {
+    font-size: 1.3rem;
+    margin-right: 10px;
+  }
+}

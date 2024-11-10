@@ -1,47 +1,20 @@
-// Smooth scroll to sections
-document.querySelectorAll("a.nav-link").forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const targetId = this.getAttribute("href").substring(1);
-    const targetSection = document.getElementById(targetId);
-
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: "smooth" });
-    }
-  });
+// preloader
+window.addEventListener("load", function () {
+  var preloader = document.getElementById("preloader");
+  preloader.classList.add("fade-out");
+  setTimeout(function () {
+    preloader.style.display = "none";
+  }, 500);
 });
 
-// Update active link on scroll
-window.addEventListener("scroll", () => {
-  const sections = document.querySelectorAll("section");
-  const navbarLinks = document.querySelectorAll(".navbar-nav .nav-link");
-
-  let currentSection = "";
-
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop - 60;
-    if (scrollY >= sectionTop) {
-      currentSection = section.getAttribute("id");
-    }
-  });
-
-  navbarLinks.forEach((link) => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === `#${currentSection}`) {
-      link.classList.add("active");
-    }
-  });
-});
-
-// learnmore button
-document.querySelectorAll(".learn-more").forEach((button) => {
-  button.addEventListener("click", () => {
-    alert("Learn more about our services on our dedicated page!");
-    // Alternatively, you could redirect to a specific URL:
-    // window.location.href = 'services.html';
-  });
-});
-
+// // learnmore button
+// document.querySelectorAll(".learn-more").forEach((button) => {
+//   button.addEventListener("click", () => {
+//     alert("Learn more about our services on our dedicated page!");
+//     // Alternatively, you could redirect to a specific URL:
+//     // window.location.href = 'services.html';
+//   });
+// });
 
 // Add hover effects to package cards
 const packageCards = document.querySelectorAll(".package-card");
@@ -87,31 +60,57 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 // Function to check if the banner is in view
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
   return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.bottom >= 0
   );
 }
 
-// Function to add the visible class to banner-text when it is scrolled into view
+// Function to handle scroll events and trigger fade-in effect
 function handleScroll() {
-  const bannerText = document.querySelector('.banner-text');
-  console.log('Checking if banner is in viewport...');
-  if (isInViewport(document.getElementById('banner'))) {
-    console.log('Banner is in viewport, adding visible class');
-    bannerText.classList.add('visible'); // Add the 'visible' class
+  const bannerText = document.querySelector(".banner-text");
+  const banner = document.getElementById("banner");
+
+  if (isInViewport(banner)) {
+    console.log("Banner is in view");
+    bannerText.style.opacity = "1"; // Show the text when banner is in the viewport
+    bannerText.style.left = "40%"; // Move the text to the adjusted left position when visible
   } else {
-    console.log('Banner is not in viewport');
+    console.log("Banner is not in view");
+    bannerText.style.opacity = "0"; // Hide the text when out of view
+    bannerText.style.left = "50%"; // Reset the text back to center when hidden
   }
 }
 
-
 // Listen to scroll events
-window.addEventListener('scroll', handleScroll);
+window.addEventListener("scroll", handleScroll);
 
+// Ensure that the text is hidden initially on page load
+document.addEventListener("DOMContentLoaded", function () {
+  const bannerText = document.querySelector(".banner-text");
+  bannerText.style.opacity = "0"; // Ensure it's hidden initially
+  bannerText.style.left = "50%"; // Ensure it starts from the center when hidden
+});
+
+// Debounce function to limit scroll event execution
+function debounce(func, wait = 20, immediate = true) {
+  let timeout;
+  return function () {
+    const context = this,
+      args = arguments;
+    const later = function () {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+
+// Use debounce for the scroll event handler
+window.addEventListener("scroll", debounce(handleScroll));
